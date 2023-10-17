@@ -13,14 +13,13 @@ import UIKit
 import SnapKit
 import SDWebImage
 
-class PersonageCell: UITableViewCell {
+class PersonageCell: BaseTableViewCell {
 
     public static var identifier: String {
         get {
             return "MainPersonageCell"
         }
     }
-    var backView = UIView()
     var personageImage = UIImageView()
     var nameLabel = UILabel()
     var genderLabel = UILabel()
@@ -31,9 +30,7 @@ class PersonageCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setupView()
-        setupBackView()
     }
     
     required init?(coder: NSCoder) {
@@ -41,17 +38,6 @@ class PersonageCell: UITableViewCell {
     }
     
     func setupView() {
-        self.round()
-        backgroundColor = .clear
-        addSubview(backView)
-        backView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
-        }
-    }
-    
-    func setupBackView() {
-        backView.backgroundColor = .elementColor
-        backView.round()
         backView.addSubviews([personageImage, nameLabel, genderLabel, statusLabel])
         personageImage.round()
         personageImage.snp.makeConstraints { make in
@@ -92,6 +78,5 @@ class PersonageCell: UITableViewCell {
         nameTitle.textColor = .lightGray
         statusTitle.textColor = .lightGray
         genderTitle.textColor = .lightGray
-        
     }
 }

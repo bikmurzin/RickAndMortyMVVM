@@ -58,8 +58,6 @@ class MainViewModel {
             } else {
                 cellDataSource.value = unwrCellViewModels
             }
-        } else {
-            
         }
     }
 }

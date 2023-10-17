@@ -1,9 +1,9 @@
 ////   /*
 //
 //  Project: RickAndMorty
-//  File: ViewController.swift
+//  File: DetailsPersonageViewController.swift
 //  Created by: Robert Bikmurzin
-//  Date: 14.10.2023
+//  Date: 16.10.2023
 //
 //  Status: in progress | Decorated
 //
@@ -11,31 +11,49 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
-class MainViewController: UIViewController {
-    
-    var tableView = UITableView()
+class DetailsPersonageViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
+    var tableView = UITableView()
     
-    var viewModel: MainViewModel = MainViewModel()
-    var cellDataSource: [PersonageTableCellViewModel] = []
-
+    // View Model:
+    var viewModel: DetailsPersonageViewModel
+    var cellDataSource: [EpisodeTableCellViewModel] = []
+    
+    init(viewModel: DetailsPersonageViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
         bindViewModel()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.getData()
+    }
+    
     func configView() {
-        title = "Characters"
+        title = "Episodes"
         view.backgroundColor = .mainBackgroundColor
-        setupTableView()
-        view.addSubview(activityIndicator)
+        view.addSubviews([tableView, activityIndicator])
+        tableView.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(8)
+            make.verticalEdges.equalToSuperview()
+        }
         activityIndicator.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
         activityIndicator.style = .large
         activityIndicator.color = .white
+        setupTableView()
     }
     
     func bindViewModel() {
@@ -59,21 +77,4 @@ class MainViewController: UIViewController {
             self.reloadTableView()
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.getData()
-    }
-    
-    func openDetails(personageId: Int) {
-        guard let personageViewModel = viewModel.cellDataSource.value?[personageId] else {
-            return
-        }
-        let detailsViewModel = DetailsPersonageViewModel(personage: personageViewModel.personage)
-        let detailsController = DetailsPersonageViewController(viewModel: detailsViewModel)
-        DispatchQueue.main.async {
-            self.navigationController?.pushViewController(detailsController, animated: true)
-        }
-    }
 }
-

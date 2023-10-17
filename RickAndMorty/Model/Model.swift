@@ -60,7 +60,12 @@ struct Location: Decodable {
 struct Episode: Decodable, Identifiable {
     var id: Int
     var name: String
-    var air_date: String
+    var airDate: String
     var episode: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, episode
+        case airDate = "air_date"
+    }
 }
 

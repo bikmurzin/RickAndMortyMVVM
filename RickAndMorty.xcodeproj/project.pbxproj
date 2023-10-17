@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		70291F2C2ADD0ACD00B7920A /* DetailsPersonageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70291F2B2ADD0ACD00B7920A /* DetailsPersonageViewController.swift */; };
+		70291F2E2ADD31C900B7920A /* EpisodeTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70291F2D2ADD31C900B7920A /* EpisodeTableCellViewModel.swift */; };
+		70291F302ADD49E900B7920A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70291F2F2ADD49E900B7920A /* BaseTableViewCell.swift */; };
+		70291F322ADD4C1A00B7920A /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70291F312ADD4C1A00B7920A /* EpisodeCell.swift */; };
+		70291F342ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70291F332ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift */; };
 		70CF8EFF2ADACE24006E4971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8EFE2ADACE24006E4971 /* AppDelegate.swift */; };
 		70CF8F012ADACE24006E4971 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F002ADACE24006E4971 /* SceneDelegate.swift */; };
 		70CF8F032ADACE24006E4971 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F022ADACE24006E4971 /* MainViewController.swift */; };
@@ -32,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		70291F2B2ADD0ACD00B7920A /* DetailsPersonageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPersonageViewController.swift; sourceTree = "<group>"; };
+		70291F2D2ADD31C900B7920A /* EpisodeTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableCellViewModel.swift; sourceTree = "<group>"; };
+		70291F2F2ADD49E900B7920A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		70291F312ADD4C1A00B7920A /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		70291F332ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsPersonageViewController+TableView.swift"; sourceTree = "<group>"; };
 		70CF8EFB2ADACE24006E4971 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70CF8EFE2ADACE24006E4971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70CF8F002ADACE24006E4971 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				70291F2B2ADD0ACD00B7920A /* DetailsPersonageViewController.swift */,
+				70291F332ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift */,
 			);
 			path = DetailsPersonageViewController;
 			sourceTree = "<group>";
@@ -112,8 +121,10 @@
 		70CF8F122ADAD1A7006E4971 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70291F2F2ADD49E900B7920A /* BaseTableViewCell.swift */,
 				70CF8F312ADADF69006E4971 /* PersonageCell.swift */,
 				70CF8F092ADACE26006E4971 /* LaunchScreen.storyboard */,
+				70291F312ADD4C1A00B7920A /* EpisodeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 				70CF8F1E2ADAD23B006E4971 /* MainViewModel.swift */,
 				70CF8F282ADADB99006E4971 /* PersonageTableCellViewModel.swift */,
 				70CF8F2A2ADADBB5006E4971 /* DetailsPersonageViewModel.swift */,
+				70291F2D2ADD31C900B7920A /* EpisodeTableCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,14 +287,18 @@
 				70CF8F252ADAD295006E4971 /* APICaller.swift in Sources */,
 				70CF8EFF2ADACE24006E4971 /* AppDelegate.swift in Sources */,
 				70CF8F232ADAD289006E4971 /* NetworkConstant.swift in Sources */,
+				70291F2E2ADD31C900B7920A /* EpisodeTableCellViewModel.swift in Sources */,
 				70CF8F322ADADF6A006E4971 /* PersonageCell.swift in Sources */,
 				70CF8F392ADAE59C006E4971 /* MainViewController+TableView.swift in Sources */,
+				70291F342ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift in Sources */,
 				70CF8F012ADACE24006E4971 /* SceneDelegate.swift in Sources */,
 				70CF8F3B2ADAE5E0006E4971 /* UIColorExtensions.swift in Sources */,
+				70291F302ADD49E900B7920A /* BaseTableViewCell.swift in Sources */,
 				70CF8F3D2ADBC290006E4971 /* UIView.swift in Sources */,
 				70CF8F272ADAD536006E4971 /* Model.swift in Sources */,
 				70CF8F2B2ADADBB5006E4971 /* DetailsPersonageViewModel.swift in Sources */,
 				70CF8F292ADADB99006E4971 /* PersonageTableCellViewModel.swift in Sources */,
+				70291F322ADD4C1A00B7920A /* EpisodeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

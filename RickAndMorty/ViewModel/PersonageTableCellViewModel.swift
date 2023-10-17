@@ -12,6 +12,7 @@
 import UIKit
 
 class PersonageTableCellViewModel {
+    var personage: Personage
     var name: String
     var status: String
     var gender: String
@@ -19,6 +20,7 @@ class PersonageTableCellViewModel {
     var statusLabelTextColor: UIColor = .lightGray
     
     init(personage: Personage) {
+        self.personage = personage
         self.name = personage.name ?? "Unknown"
         self.status = personage.status ?? "Unknown"
         self.gender = personage.gender ?? "Unknown"
