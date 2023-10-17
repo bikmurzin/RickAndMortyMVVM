@@ -1,4 +1,4 @@
-#RickAndMorty
+# RickAndMorty
 
 В приложении используется архитектура MVVM
 
