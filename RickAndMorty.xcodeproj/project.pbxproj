@@ -32,6 +32,14 @@
 		70CF8F392ADAE59C006E4971 /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F382ADAE59C006E4971 /* MainViewController+TableView.swift */; };
 		70CF8F3B2ADAE5E0006E4971 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F3A2ADAE5E0006E4971 /* UIColorExtensions.swift */; };
 		70CF8F3D2ADBC290006E4971 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F3C2ADBC290006E4971 /* UIView.swift */; };
+		70FD207C2AFA29DB00A3E72F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70FD207B2AFA29DB00A3E72F /* GoogleService-Info.plist */; };
+		70FD208B2AFA2A2700A3E72F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 70FD208A2AFA2A2700A3E72F /* FirebaseAuth */; };
+		70FD20912AFA2A2700A3E72F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 70FD20902AFA2A2700A3E72F /* FirebaseDatabase */; };
+		70FD20B52AFA2AD800A3E72F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20B42AFA2AD800A3E72F /* LoginViewController.swift */; };
+		70FD20B72AFA365700A3E72F /* LoginViewController+ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20B62AFA365700A3E72F /* LoginViewController+ConfigView.swift */; };
+		70FD20BB2AFA41D300A3E72F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20BA2AFA41D300A3E72F /* User.swift */; };
+		70FD20BE2AFA5FB800A3E72F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20BD2AFA5FB800A3E72F /* LogoutViewController.swift */; };
+		70FD20C12AFBDC2D00A3E72F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +66,12 @@
 		70CF8F382ADAE59C006E4971 /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		70CF8F3A2ADAE5E0006E4971 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		70CF8F3C2ADBC290006E4971 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		70FD207B2AFA29DB00A3E72F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70FD20B42AFA2AD800A3E72F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		70FD20B62AFA365700A3E72F /* LoginViewController+ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+ConfigView.swift"; sourceTree = "<group>"; };
+		70FD20BA2AFA41D300A3E72F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		70FD20BD2AFA5FB800A3E72F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,8 @@
 				70CF8F302ADADE07006E4971 /* SDWebImageMapKit in Frameworks */,
 				70CF8F2E2ADADE07006E4971 /* SDWebImage in Frameworks */,
 				70CF8F372ADAE31C006E4971 /* SnapKit-Dynamic in Frameworks */,
+				70FD208B2AFA2A2700A3E72F /* FirebaseAuth in Frameworks */,
+				70FD20912AFA2A2700A3E72F /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +98,15 @@
 				70291F332ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift */,
 			);
 			path = DetailsPersonageViewController;
+			sourceTree = "<group>";
+		};
+		705AEAB32AEFAA68002014A9 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				70FD20B42AFA2AD800A3E72F /* LoginViewController.swift */,
+				70FD20B62AFA365700A3E72F /* LoginViewController+ConfigView.swift */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		70CF8EF22ADACE24006E4971 = {
@@ -114,6 +139,7 @@
 				70CF8F0C2ADACE26006E4971 /* Info.plist */,
 				70CF8EFE2ADACE24006E4971 /* AppDelegate.swift */,
 				70CF8F002ADACE24006E4971 /* SceneDelegate.swift */,
+				70FD207B2AFA29DB00A3E72F /* GoogleService-Info.plist */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -143,6 +169,9 @@
 		70CF8F142ADAD1BB006E4971 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				70FD20BF2AFBDC0A00A3E72F /* TabBarController */,
+				70FD20BC2AFA5FA000A3E72F /* LogoutViewController */,
+				705AEAB32AEFAA68002014A9 /* LoginViewController */,
 				70CF8F1D2ADAD225006E4971 /* MainViewController */,
 				70291F2A2ADD0AA500B7920A /* DetailsPersonageViewController */,
 			);
@@ -153,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				70CF8F262ADAD536006E4971 /* Model.swift */,
+				70FD20BA2AFA41D300A3E72F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +230,22 @@
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
+		70FD20BC2AFA5FA000A3E72F /* LogoutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				70FD20BD2AFA5FB800A3E72F /* LogoutViewController.swift */,
+			);
+			path = LogoutViewController;
+			sourceTree = "<group>";
+		};
+		70FD20BF2AFBDC0A00A3E72F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,6 +267,8 @@
 				70CF8F2F2ADADE07006E4971 /* SDWebImageMapKit */,
 				70CF8F342ADAE31C006E4971 /* SnapKit */,
 				70CF8F362ADAE31C006E4971 /* SnapKit-Dynamic */,
+				70FD208A2AFA2A2700A3E72F /* FirebaseAuth */,
+				70FD20902AFA2A2700A3E72F /* FirebaseDatabase */,
 			);
 			productName = RickAndMorty;
 			productReference = 70CF8EFB2ADACE24006E4971 /* RickAndMorty.app */;
@@ -253,6 +301,7 @@
 			packageReferences = (
 				70CF8F2C2ADADE07006E4971 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				70CF8F332ADAE31C006E4971 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				70FD207D2AFA2A2700A3E72F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 70CF8EFC2ADACE24006E4971 /* Products */;
 			projectDirPath = "";
@@ -270,6 +319,7 @@
 			files = (
 				70CF8F0B2ADACE26006E4971 /* LaunchScreen.storyboard in Resources */,
 				70CF8F082ADACE26006E4971 /* Assets.xcassets in Resources */,
+				70FD207C2AFA29DB00A3E72F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +332,17 @@
 			files = (
 				70CF8F1F2ADAD23B006E4971 /* MainViewModel.swift in Sources */,
 				70CF8F212ADAD26C006E4971 /* Observable.swift in Sources */,
+				70FD20B72AFA365700A3E72F /* LoginViewController+ConfigView.swift in Sources */,
 				70291F2C2ADD0ACD00B7920A /* DetailsPersonageViewController.swift in Sources */,
 				70CF8F032ADACE24006E4971 /* MainViewController.swift in Sources */,
 				70CF8F252ADAD295006E4971 /* APICaller.swift in Sources */,
 				70CF8EFF2ADACE24006E4971 /* AppDelegate.swift in Sources */,
 				70CF8F232ADAD289006E4971 /* NetworkConstant.swift in Sources */,
 				70291F2E2ADD31C900B7920A /* EpisodeTableCellViewModel.swift in Sources */,
+				70FD20C12AFBDC2D00A3E72F /* TabBarController.swift in Sources */,
+				70FD20B52AFA2AD800A3E72F /* LoginViewController.swift in Sources */,
+				70FD20BE2AFA5FB800A3E72F /* LogoutViewController.swift in Sources */,
+				70FD20BB2AFA41D300A3E72F /* User.swift in Sources */,
 				70CF8F322ADADF6A006E4971 /* PersonageCell.swift in Sources */,
 				70CF8F392ADAE59C006E4971 /* MainViewController+TableView.swift in Sources */,
 				70291F342ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift in Sources */,
@@ -449,6 +504,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,6 +532,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +586,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		70FD207D2AFA2A2700A3E72F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.17.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -551,6 +616,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70CF8F332ADAE31C006E4971 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		70FD208A2AFA2A2700A3E72F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70FD207D2AFA2A2700A3E72F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		70FD20902AFA2A2700A3E72F /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70FD207D2AFA2A2700A3E72F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
