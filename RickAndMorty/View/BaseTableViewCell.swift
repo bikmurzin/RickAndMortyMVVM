@@ -14,7 +14,7 @@ import SnapKit
 
 class BaseTableViewCell: UITableViewCell {
 
-    var backView = UIView()
+    var backView = UIView(frame: CGRect.zero)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -167,10 +167,11 @@
 		70CF8F142ADAD1BB006E4971 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				70FD20BC2AFA5FA000A3E72F /* LogoutViewController */,
-				70CF8F1D2ADAD225006E4971 /* MainViewController */,
-				705AEAB32AEFAA68002014A9 /* LoginViewController */,
 				70FD20BF2AFBDC0A00A3E72F /* TabBarController */,
+				70CF8F1D2ADAD225006E4971 /* MainViewController */,
+				70291F2A2ADD0AA500B7920A /* DetailsPersonageViewController */,
+				70FD20BC2AFA5FA000A3E72F /* LogoutViewController */,
+				705AEAB32AEFAA68002014A9 /* LoginViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,7 +224,6 @@
 			children = (
 				70CF8F022ADACE24006E4971 /* MainViewController.swift */,
 				70CF8F382ADAE59C006E4971 /* MainViewController+TableView.swift */,
-				70291F2A2ADD0AA500B7920A /* DetailsPersonageViewController */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";

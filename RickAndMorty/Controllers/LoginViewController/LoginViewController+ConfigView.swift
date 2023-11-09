@@ -11,6 +11,7 @@
 
 import Foundation
 import SnapKit
+import UIKit
 
 extension LoginViewController {
     
@@ -23,6 +24,13 @@ extension LoginViewController {
         configLoginTextField()
         configLoginButton()
         configSignUpButton()
+        addTapGesture()
+    }
+    
+    /// Добавляет распознавание тапа по экрану, чтобы скрыть клавиатуру
+    func addTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector (UIView.endEditing(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     func configImageView() {
@@ -39,6 +47,7 @@ extension LoginViewController {
             make.width.centerX.height.equalTo(passwordTextField)
         }
         loginTextField.backgroundColor = .elementColor
+        loginTextField.alpha = 0.9
         loginTextField.round()
         loginTextField.placeholder = " Email"
         
@@ -46,12 +55,13 @@ extension LoginViewController {
     
     func configPasswordTextField() {
         passwordTextField.snp.makeConstraints { make in
-            make.bottom.equalTo(view.snp.centerY).multipliedBy(1.4)
+            make.bottom.equalTo(view.snp.centerY)
             make.width.equalToSuperview().multipliedBy(0.7)
             make.centerX.equalToSuperview()
-            make.height.equalTo(40)
+            make.height.equalTo(50)
         }
         passwordTextField.backgroundColor = .elementColor
+        passwordTextField.alpha = 0.9
         passwordTextField.round()
         passwordTextField.isSecureTextEntry = true
         passwordTextField.placeholder = " Password"
