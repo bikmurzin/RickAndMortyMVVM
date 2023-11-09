@@ -158,10 +158,8 @@
 		70CF8F132ADAD1AE006E4971 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				70CF8F1E2ADAD23B006E4971 /* MainViewModel.swift */,
-				70CF8F282ADADB99006E4971 /* PersonageTableCellViewModel.swift */,
-				70CF8F2A2ADADBB5006E4971 /* DetailsPersonageViewModel.swift */,
-				70291F2D2ADD31C900B7920A /* EpisodeTableCellViewModel.swift */,
+				70FD20C62AFCC8C100A3E72F /* MainViewModel */,
+				70FD20C72AFCC8DD00A3E72F /* DetailsPersonageViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,11 +167,10 @@
 		70CF8F142ADAD1BB006E4971 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				70FD20BF2AFBDC0A00A3E72F /* TabBarController */,
 				70FD20BC2AFA5FA000A3E72F /* LogoutViewController */,
-				705AEAB32AEFAA68002014A9 /* LoginViewController */,
 				70CF8F1D2ADAD225006E4971 /* MainViewController */,
-				70291F2A2ADD0AA500B7920A /* DetailsPersonageViewController */,
+				705AEAB32AEFAA68002014A9 /* LoginViewController */,
+				70FD20BF2AFBDC0A00A3E72F /* TabBarController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +223,7 @@
 			children = (
 				70CF8F022ADACE24006E4971 /* MainViewController.swift */,
 				70CF8F382ADAE59C006E4971 /* MainViewController+TableView.swift */,
+				70291F2A2ADD0AA500B7920A /* DetailsPersonageViewController */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -244,6 +242,24 @@
 				70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		70FD20C62AFCC8C100A3E72F /* MainViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70CF8F1E2ADAD23B006E4971 /* MainViewModel.swift */,
+				70CF8F282ADADB99006E4971 /* PersonageTableCellViewModel.swift */,
+			);
+			path = MainViewModel;
+			sourceTree = "<group>";
+		};
+		70FD20C72AFCC8DD00A3E72F /* DetailsPersonageViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70CF8F2A2ADADBB5006E4971 /* DetailsPersonageViewModel.swift */,
+				70291F2D2ADD31C900B7920A /* EpisodeTableCellViewModel.swift */,
+			);
+			path = DetailsPersonageViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

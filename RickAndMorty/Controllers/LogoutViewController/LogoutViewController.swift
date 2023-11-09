@@ -16,7 +16,6 @@ import Firebase
 class LogoutViewController: UIViewController {
     
     var logoutButton = UIButton()
-    var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

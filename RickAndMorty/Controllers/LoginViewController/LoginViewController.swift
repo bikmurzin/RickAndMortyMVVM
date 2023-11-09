@@ -30,9 +30,7 @@ class LoginViewController: UIViewController {
         // Инициализация наблюдателя аутентификации
         handle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             if user == nil {
-//                self.navigationController?.popToRootViewController(animated: true)
             } else {
-//                self.navigationController?.pushViewController(LogoutViewController(), animated: true)
                 self?.loginTextField.text = nil
                 self?.passwordTextField.text = nil
                 self?.dismiss(animated: true)
