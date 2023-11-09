@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabs()
+        view.backgroundColor = .mainBackgroundColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +31,7 @@ class TabBarController: UITabBarController {
                 self.loginVC?.modalPresentationStyle = .fullScreen
                 self.present(self.loginVC ?? LoginViewController(), animated: false)
             } else {
+                self.setupTabs()
             }
         }
     }

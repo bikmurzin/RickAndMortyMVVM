@@ -13,7 +13,7 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    
+    var imageView = UIImageView()
     var signUpButton = UIButton()
     var loginButton = UIButton()
     var loginTextField = UITextField()
@@ -54,7 +54,16 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text,
             !email.isEmpty,
             !password.isEmpty
-        else { return }
+        else {
+            let alert = UIAlertController(
+                title: "Login or Password not Entered",
+                message: "At least one of the fields is not filled in. Enter your username and password and try again.",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error, user == nil {
                 let alert = UIAlertController(
@@ -73,13 +82,28 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text,
             !email.isEmpty,
             !password.isEmpty
-        else { return }
+        else {
+            let alert = UIAlertController(
+                title: "Login or Password not Entered",
+                message: "At least one of the fields is not filled in. Enter your username and password and try again.",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         Auth.auth().createUser(withEmail: email, password: password) { _, error in
             // аутентификация после успешного создания нового пользователя
             if error == nil {
                 Auth.auth().signIn(withEmail: email, password: password)
             } else {
-                print("Error in createUser: \(error?.localizedDescription ?? "")")
+                if let error = error {
+                    let alert = UIAlertController(
+                        title: "Sign Up Failed",
+                        message: error.localizedDescription,
+                        preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }

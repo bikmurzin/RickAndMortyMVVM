@@ -15,13 +15,22 @@ import SnapKit
 extension LoginViewController {
     
     func configView() {
-        view.addSubviews([signUpButton, loginButton, loginTextField, passwordTextField])
+        view.addSubviews([imageView, signUpButton, loginButton, loginTextField, passwordTextField])
         view.backgroundColor = .mainBackgroundColor
         title = "Rick And Morty"
+        configImageView()
         configPasswordTextField()
         configLoginTextField()
         configLoginButton()
         configSignUpButton()
+    }
+    
+    func configImageView() {
+        imageView.snp.makeConstraints({ make in
+            make.edges.equalToSuperview()
+        })
+        imageView.image = .launch
+        imageView.contentMode = .scaleAspectFill
     }
     
     func configLoginTextField() {
@@ -37,7 +46,7 @@ extension LoginViewController {
     
     func configPasswordTextField() {
         passwordTextField.snp.makeConstraints { make in
-            make.bottom.equalTo(view.snp.centerY).offset(-20)
+            make.bottom.equalTo(view.snp.centerY).multipliedBy(1.4)
             make.width.equalToSuperview().multipliedBy(0.7)
             make.centerX.equalToSuperview()
             make.height.equalTo(40)
