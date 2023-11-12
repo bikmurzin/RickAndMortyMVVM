@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     var loginButton = UIButton()
     var loginTextField = UITextField()
     var passwordTextField = UITextField()
+    /// Наблюдатель аутентификации пользователя
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
@@ -28,8 +29,8 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         // Инициализация наблюдателя аутентификации
         handle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            if user == nil {
-            } else {
+            // Если пользователь авторизован, скрыть LoginViewController
+            if user != nil {
                 self?.loginTextField.text = nil
                 self?.passwordTextField.text = nil
                 self?.dismiss(animated: true)
@@ -39,12 +40,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // Удаление слушателя
         guard let handle = handle else { return }
         Auth.auth().removeStateDidChangeListener(handle)
     }
     
-    
+    /// Обработка нажатия кнопки loginButton
     @objc func loginButtonAction() {
         guard
             let email = loginTextField.text,
@@ -73,6 +73,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /// Обработка нажатия кнопки signUpButton
     @objc func signUpButtonAction() {
         guard
             let email = loginTextField.text,

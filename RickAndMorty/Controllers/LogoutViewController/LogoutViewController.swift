@@ -33,7 +33,6 @@ class LogoutViewController: UIViewController {
     }
     
     func configLogoutButton() {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutAction))
         logoutButton.addTarget(self, action: #selector(logoutAction), for: .touchUpInside)
         logoutButton.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -45,8 +44,8 @@ class LogoutViewController: UIViewController {
         logoutButton.addWhiteShadow()
     }
     
+    /// Выполняет signOut для пользователя
     @objc func logoutAction() {
-        print("Logout")
         do {
             try Auth.auth().signOut()
         } catch let error {

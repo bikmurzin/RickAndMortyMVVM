@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     var activityIndicator = UIActivityIndicatorView()
     
     var viewModel: MainViewModel = MainViewModel()
+    /// Массив источников данных для каждой ячейки
     var cellDataSource: [PersonageTableCellViewModel] = []
 
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class MainViewController: UIViewController {
         configView()
         bindViewModel()
     }
-
+    
     func configView() {
         title = "Characters"
         view.backgroundColor = .mainBackgroundColor
@@ -37,7 +38,7 @@ class MainViewController: UIViewController {
         activityIndicator.style = .large
         activityIndicator.color = .white
     }
-    
+    /// Выполняет привязку замыканий для наблюдаемых свойств viewModel
     func bindViewModel() {
         viewModel.isLoading.bind { [weak self] isLoading in
             guard let self = self, let isLoading = isLoading else {
@@ -65,6 +66,7 @@ class MainViewController: UIViewController {
         viewModel.getData()
     }
     
+    /// Выполняет переход на DetailsPersonageViewController для выбранного персонажа
     func openDetails(personageId: Int) {
         guard let personageViewModel = viewModel.cellDataSource.value?[personageId] else {
             return

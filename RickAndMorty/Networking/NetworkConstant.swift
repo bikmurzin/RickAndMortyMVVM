@@ -27,13 +27,4 @@ class NetworkConstant {
     public var characterURL: String {
         return serverAddress + "character"
     }
-    
-    public var locationURL: String {
-        return serverAddress + "location"
-    }
-
-    public var episodeURL: String {
-        return serverAddress + "episode"
-    }
-
 }

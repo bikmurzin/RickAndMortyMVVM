@@ -12,6 +12,7 @@
 import UIKit
 import SnapKit
 
+/// Основа для ячейки персонажа и ячейки эпизода. Нужен для визуального добавления расстояния между ячейками
 class BaseTableViewCell: UITableViewCell {
 
     var backView = UIView(frame: CGRect.zero)

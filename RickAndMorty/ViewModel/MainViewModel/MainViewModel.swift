@@ -11,9 +11,13 @@
 
 import Foundation
 
+/// View Model для MainViewController
 class MainViewModel {
+    /// Флаг, отображающий, идет ли сейчас загрузка
     var isLoading: Observable<Bool> = Observable(false)
+    /// Источник данных для ячеек
     var cellDataSource: Observable<[PersonageTableCellViewModel]> = Observable(nil)
+    // Источник данных для View Model
     var dataSource: CharactersModel?
     private var characterURL = NetworkConstant.shared.characterURL
     
@@ -25,6 +29,7 @@ class MainViewModel {
         self.cellDataSource.value?.count ?? 0
     }
     
+    /// Загружает следующую страницу персонажей
     func loadNextPage() {
         guard let stringURL = dataSource?.info.next else { return }
         if self.characterURL != stringURL {
@@ -33,6 +38,7 @@ class MainViewModel {
         }
     }
     
+    /// Выполняет запрос по URL, который хранится в characterURL. При успешной загруке заполняет массив cellDataSource
     func getData() {
         if isLoading.value ?? true {
             return
@@ -50,6 +56,7 @@ class MainViewModel {
         }
     }
     
+    /// Заполняет массив cellDataSource
     func mapCellData() {
         if let unwrCellViewModels = self.dataSource?.personages.compactMap({PersonageTableCellViewModel(personage: $0)}) {
             // Если массив не пустой, то добавляем в него новые элементы. Иначе - присваиваем ему массив с новыми элементами

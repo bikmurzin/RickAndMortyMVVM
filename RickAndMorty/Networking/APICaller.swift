@@ -17,6 +17,7 @@ enum NetworkError: Error {
 }
 
 class APICaller {
+    /// Совершает запрос по указанному URL и выполняет переданный completionHandler
     static func makeRequest<T: Decodable>(urlString: String,
         completionHandler: @escaping (_ result: Result<T, NetworkError>) -> Void
     ) {

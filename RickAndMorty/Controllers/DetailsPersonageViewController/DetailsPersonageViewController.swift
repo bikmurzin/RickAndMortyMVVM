@@ -14,10 +14,11 @@ import SnapKit
 import SDWebImage
 
 class DetailsPersonageViewController: UIViewController {
+    // MARK: UI
     var activityIndicator = UIActivityIndicatorView()
     var tableView = UITableView()
     
-    // View Model:
+    // MARK: View Models
     var viewModel: DetailsPersonageViewModel
     var cellDataSource: [EpisodeTableCellViewModel] = []
     
@@ -56,6 +57,7 @@ class DetailsPersonageViewController: UIViewController {
         setupTableView()
     }
     
+    /// Выполняет привязку замыканий для наблюдаемых свойств viewModel
     func bindViewModel() {
         viewModel.isLoading.bind { [weak self] isLoading in
             guard let self = self, let isLoading = isLoading else {

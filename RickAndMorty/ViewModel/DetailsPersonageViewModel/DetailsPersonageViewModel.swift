@@ -11,6 +11,7 @@
 
 import Foundation
 
+/// ViewModel для DetailsPersonageViewController
 class DetailsPersonageViewModel {
     private var personage: Personage
     private var episodes: [Episode] = []

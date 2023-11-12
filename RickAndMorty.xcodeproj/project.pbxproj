@@ -36,7 +36,6 @@
 		70FD20912AFA2A2700A3E72F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 70FD20902AFA2A2700A3E72F /* FirebaseDatabase */; };
 		70FD20B52AFA2AD800A3E72F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20B42AFA2AD800A3E72F /* LoginViewController.swift */; };
 		70FD20B72AFA365700A3E72F /* LoginViewController+ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20B62AFA365700A3E72F /* LoginViewController+ConfigView.swift */; };
-		70FD20BB2AFA41D300A3E72F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20BA2AFA41D300A3E72F /* User.swift */; };
 		70FD20BE2AFA5FB800A3E72F /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20BD2AFA5FB800A3E72F /* LogoutViewController.swift */; };
 		70FD20C12AFBDC2D00A3E72F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 		70FD207B2AFA29DB00A3E72F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70FD20B42AFA2AD800A3E72F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70FD20B62AFA365700A3E72F /* LoginViewController+ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+ConfigView.swift"; sourceTree = "<group>"; };
-		70FD20BA2AFA41D300A3E72F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70FD20BD2AFA5FB800A3E72F /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		70FD20C02AFBDC2D00A3E72F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				70CF8F262ADAD536006E4971 /* Model.swift */,
-				70FD20BA2AFA41D300A3E72F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 				70FD20C12AFBDC2D00A3E72F /* TabBarController.swift in Sources */,
 				70FD20B52AFA2AD800A3E72F /* LoginViewController.swift in Sources */,
 				70FD20BE2AFA5FB800A3E72F /* LogoutViewController.swift in Sources */,
-				70FD20BB2AFA41D300A3E72F /* User.swift in Sources */,
 				70CF8F322ADADF6A006E4971 /* PersonageCell.swift in Sources */,
 				70CF8F392ADAE59C006E4971 /* MainViewController+TableView.swift in Sources */,
 				70291F342ADD584B00B7920A /* DetailsPersonageViewController+TableView.swift in Sources */,

@@ -11,6 +11,7 @@
 
 import UIKit
 
+/// View Model для ячейки персонажа на MainViewController
 class PersonageTableCellViewModel {
     var personage: Personage
     var name: String

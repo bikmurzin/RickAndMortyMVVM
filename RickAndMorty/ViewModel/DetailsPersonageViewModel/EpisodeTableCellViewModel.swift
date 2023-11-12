@@ -11,6 +11,7 @@
 
 import Foundation
 
+/// ViewModel для ячейки с эпизодом на DetailsPersonageViewController
 class EpisodeTableCellViewModel {
     var episodeName: String
     var airDate: String

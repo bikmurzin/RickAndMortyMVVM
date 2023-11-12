@@ -13,13 +13,13 @@ import Foundation
 import UIKit
 
 extension UIView {
+    /// Устанавливает cornerRadius для view. По умолчанию radius = 10
     func round( _ radius: CGFloat = 10) {
         self.layer.cornerRadius = radius
-        
         // Если true, то subviews не выходят за границы view
         self.clipsToBounds = true
     }
-    
+    /// Добавляет белую тень и cornerRadius = 10 для view
     func addWhiteShadow() {
         self.layer.cornerRadius = 10
         self.layer.shadowColor = UIColor.white.cgColor
@@ -27,7 +27,7 @@ extension UIView {
         self.layer.shadowOffset = .zero
         self.layer.shadowRadius = 10
     }
-    
+    /// Позволяет добавить массив subviews
     func addSubviews(_ subviews: [UIView]) {
         for subview in subviews {
             self.addSubview(subview)
