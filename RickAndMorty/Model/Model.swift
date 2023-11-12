@@ -69,3 +69,6 @@ struct Episode: Decodable, Identifiable {
     }
 }
 
+struct PersonageDetails {
+    var episodes: [Episode]
+}

@@ -16,8 +16,8 @@ class DetailsPersonageViewModel {
     private var personage: Personage
     private var episodes: [Episode] = []
     private var imageURL: URL?
-    
-    var isLoading: Observable<Bool> = Observable(false)
+
+    /// Источник данных для ячеек
     var cellDataSource: Observable<[EpisodeTableCellViewModel]> = Observable(nil)
     
     init(personage: Personage) {
@@ -30,29 +30,31 @@ class DetailsPersonageViewModel {
     }
     
     func getData() {
-        guard let episodeURLs = personage.episode else { return }
-        isLoading.value = true
+        guard let episodeURLs = personage.episode else {
+            return
+        }
+        
         let group = DispatchGroup()
         let queue = DispatchQueue(label: "queue")
-        var episodeCellViewModels: [EpisodeTableCellViewModel] = []
         
+        var episodeCellViewModels: [EpisodeTableCellViewModel] = []
         for episodeURL in episodeURLs {
             group.enter()
             queue.async {
-                APICaller.makeRequest(urlString: episodeURL) { [weak self] (result: Result<Episode, NetworkError>) in
-                    group.leave()
+                APICaller.makeRequest(urlString: episodeURL) { (result: Result<Episode, NetworkError>) in
                     switch result {
                     case .success(let episode):
                         episodeCellViewModels.append(EpisodeTableCellViewModel(episode: episode))
+                        group.leave()
                     case .failure(let error):
                         print(error)
+                        group.leave()
                     }
                 }
             }
         }
         group.wait()
         cellDataSource.value = episodeCellViewModels
-        isLoading.value = false
     }
     
     func personageName() -> String {

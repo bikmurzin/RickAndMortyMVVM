@@ -15,7 +15,6 @@ import SDWebImage
 
 class DetailsPersonageViewController: UIViewController {
     // MARK: UI
-    var activityIndicator = UIActivityIndicatorView()
     var tableView = UITableView()
     
     // MARK: View Models
@@ -44,33 +43,16 @@ class DetailsPersonageViewController: UIViewController {
     func configView() {
         title = "Episodes"
         view.backgroundColor = .mainBackgroundColor
-        view.addSubviews([tableView, activityIndicator])
+        view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(8)
             make.verticalEdges.equalToSuperview()
         }
-        activityIndicator.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
-        activityIndicator.style = .large
-        activityIndicator.color = .white
         setupTableView()
     }
     
     /// Выполняет привязку замыканий для наблюдаемых свойств viewModel
     func bindViewModel() {
-        viewModel.isLoading.bind { [weak self] isLoading in
-            guard let self = self, let isLoading = isLoading else {
-                return
-            }
-            DispatchQueue.main.async {
-                if isLoading {
-                    self.activityIndicator.startAnimating()
-                } else {
-                    self.activityIndicator.stopAnimating()
-                }
-            }
-        }
         viewModel.cellDataSource.bind { [weak self] cellsViewModels in
             guard let self = self, let cellsViewModels = cellsViewModels else {
                 return
