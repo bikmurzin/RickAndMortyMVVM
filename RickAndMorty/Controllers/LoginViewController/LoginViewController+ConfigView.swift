@@ -16,10 +16,9 @@ import UIKit
 extension LoginViewController {
     
     func configView() {
-        view.addSubviews([imageView, signUpButton, loginButton, loginTextField, passwordTextField])
+        view.addSubviews([signUpButton, loginButton, loginTextField, passwordTextField])
         view.backgroundColor = .mainBackgroundColor
         title = "Rick And Morty"
-        configImageView()
         configPasswordTextField()
         configLoginTextField()
         configLoginButton()
@@ -33,14 +32,6 @@ extension LoginViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    func configImageView() {
-        imageView.snp.makeConstraints({ make in
-            make.edges.equalToSuperview()
-        })
-        imageView.image = .launch
-        imageView.contentMode = .scaleAspectFill
-    }
-    
     func configLoginTextField() {
         loginTextField.snp.makeConstraints { make in
             make.bottom.equalTo(passwordTextField.snp.top).offset(-10)
@@ -50,12 +41,13 @@ extension LoginViewController {
         loginTextField.alpha = 0.9
         loginTextField.round()
         loginTextField.placeholder = " Email"
+        loginTextField.autocapitalizationType = .none
         
     }
     
     func configPasswordTextField() {
         passwordTextField.snp.makeConstraints { make in
-            make.bottom.equalTo(view.snp.centerY)
+            make.bottom.equalTo(view.snp.centerY).multipliedBy(0.75)
             make.width.equalToSuperview().multipliedBy(0.7)
             make.centerX.equalToSuperview()
             make.height.equalTo(50)
@@ -65,11 +57,12 @@ extension LoginViewController {
         passwordTextField.round()
         passwordTextField.isSecureTextEntry = true
         passwordTextField.placeholder = " Password"
+        loginTextField.autocapitalizationType = .none
     }
     
     func configLoginButton() {
         loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(70)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(40)
             make.width.centerX.equalTo(passwordTextField)
             make.height.equalTo(50)
         }

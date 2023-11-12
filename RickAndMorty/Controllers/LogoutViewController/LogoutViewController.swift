@@ -33,7 +33,16 @@ class LogoutViewController: UIViewController {
     }
     
     func configLogoutButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutAction))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutAction))
+        logoutButton.addTarget(self, action: #selector(logoutAction), for: .touchUpInside)
+        logoutButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.height.equalTo(70)
+            make.width.equalToSuperview().multipliedBy(0.6)
+        }
+        logoutButton.backgroundColor = .elementColor
+        logoutButton.setTitle("Logout", for: .normal)
+        logoutButton.addWhiteShadow()
     }
     
     @objc func logoutAction() {

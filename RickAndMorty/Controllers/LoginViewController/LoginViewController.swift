@@ -13,7 +13,6 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    var imageView = UIImageView()
     var signUpButton = UIButton()
     var loginButton = UIButton()
     var loginTextField = UITextField()

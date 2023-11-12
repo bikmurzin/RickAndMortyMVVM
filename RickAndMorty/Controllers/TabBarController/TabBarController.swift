@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainBackgroundColor
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,15 +37,15 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabs() {
-        let home = createNavigation(title: "Home", image: UIImage(systemName: "house"), vc: MainViewController())
-        let users = createNavigation(title: "Users", image: UIImage(systemName: "house"), vc: LogoutViewController())
+        let home = createNavigation(title: "Characters", image: UIImage(systemName: "house"), vc: MainViewController())
+        let users = createNavigation(title: "Logout", image: UIImage(systemName: "person"), vc: LogoutViewController())
         self.setViewControllers([home, users], animated: true)
     }
     
     private func createNavigation(title: String, image: UIImage?, vc: UIViewController) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = image
-        return navigationController
+        let navController = UINavigationController(rootViewController: vc)
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = image
+        return navController
     }
 }

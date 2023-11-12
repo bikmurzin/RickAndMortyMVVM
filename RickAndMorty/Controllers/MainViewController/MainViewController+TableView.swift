@@ -24,10 +24,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-            make.verticalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.verticalEdges.equalTo(view.safeAreaLayoutGuide)
         }
         tableView.showsVerticalScrollIndicator = false
-        tableView.separatorColor = .none
+        tableView.separatorStyle = .none
         self.registerCells()
         
     }

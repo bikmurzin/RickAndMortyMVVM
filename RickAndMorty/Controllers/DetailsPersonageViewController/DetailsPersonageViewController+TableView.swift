@@ -20,7 +20,7 @@ extension DetailsPersonageViewController: UITableViewDelegate, UITableViewDataSo
         self.tableView.backgroundColor = .clear        
         tableView.showsVerticalScrollIndicator = false
         
-        tableView.separatorColor = .none
+        tableView.separatorStyle = .none
         self.registerCells()
     }
     

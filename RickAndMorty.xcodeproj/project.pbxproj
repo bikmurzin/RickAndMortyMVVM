@@ -28,7 +28,6 @@
 		70CF8F302ADADE07006E4971 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70CF8F2F2ADADE07006E4971 /* SDWebImageMapKit */; };
 		70CF8F322ADADF6A006E4971 /* PersonageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F312ADADF69006E4971 /* PersonageCell.swift */; };
 		70CF8F352ADAE31C006E4971 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70CF8F342ADAE31C006E4971 /* SnapKit */; };
-		70CF8F372ADAE31C006E4971 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 70CF8F362ADAE31C006E4971 /* SnapKit-Dynamic */; };
 		70CF8F392ADAE59C006E4971 /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F382ADAE59C006E4971 /* MainViewController+TableView.swift */; };
 		70CF8F3B2ADAE5E0006E4971 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F3A2ADAE5E0006E4971 /* UIColorExtensions.swift */; };
 		70CF8F3D2ADBC290006E4971 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F3C2ADBC290006E4971 /* UIView.swift */; };
@@ -82,7 +81,6 @@
 				70CF8F352ADAE31C006E4971 /* SnapKit in Frameworks */,
 				70CF8F302ADADE07006E4971 /* SDWebImageMapKit in Frameworks */,
 				70CF8F2E2ADADE07006E4971 /* SDWebImage in Frameworks */,
-				70CF8F372ADAE31C006E4971 /* SnapKit-Dynamic in Frameworks */,
 				70FD208B2AFA2A2700A3E72F /* FirebaseAuth in Frameworks */,
 				70FD20912AFA2A2700A3E72F /* FirebaseDatabase in Frameworks */,
 			);
@@ -282,7 +280,6 @@
 				70CF8F2D2ADADE07006E4971 /* SDWebImage */,
 				70CF8F2F2ADADE07006E4971 /* SDWebImageMapKit */,
 				70CF8F342ADAE31C006E4971 /* SnapKit */,
-				70CF8F362ADAE31C006E4971 /* SnapKit-Dynamic */,
 				70FD208A2AFA2A2700A3E72F /* FirebaseAuth */,
 				70FD20902AFA2A2700A3E72F /* FirebaseDatabase */,
 			);
@@ -439,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -496,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -627,11 +624,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70CF8F332ADAE31C006E4971 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		70CF8F362ADAE31C006E4971 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 70CF8F332ADAE31C006E4971 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		70FD208A2AFA2A2700A3E72F /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
